@@ -3,7 +3,7 @@
 var metal = require('gulp-metal');
 
 metal.registerTasks({
-	bundleFileName: 'sport.js',
+	bundleFileName: 'zsfootball-models.js',
 	moduleName: 'zsfootball-models',
 	testNodeSrc: [
 		'env/test/node.js',
