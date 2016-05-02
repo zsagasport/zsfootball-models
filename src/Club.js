@@ -6,6 +6,12 @@ class Club extends Model  {
 }
 
 Club.STATE = {
+	/**
+	 *
+	 */
+	title: {
+
+	}
 };
 
 export default Club;

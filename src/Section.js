@@ -6,6 +6,19 @@ class Section extends Model  {
 }
 
 Section.STATE = {
+	/**
+	 *
+	 */
+	clubId: {
+
+	},
+
+	/**
+	 *
+	 */
+	title: {
+
+	}
 };
 
 export default Section;

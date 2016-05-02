@@ -6,6 +6,19 @@ class Round extends Model  {
 }
 
 Round.STATE = {
+	/**
+	 *
+	 */
+	competitionId: {
+
+	},
+
+	/**
+	 *
+	 */
+	num: {
+
+	}
 };
 
 export default Round;

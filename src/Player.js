@@ -6,6 +6,26 @@ class Player extends Person  {
 }
 
 Player.STATE = {
+	/**
+	 *
+	 */
+	image: {
+
+	},
+
+	/**
+	 *
+	 */
+	number: {
+
+	},
+
+	/**
+	 *
+	 */
+	position: {
+
+	}
 };
 
 export default Player;
