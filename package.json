@@ -1,0 +1,34 @@
+{
+	"name": "zsfootball-models",
+	"version": "0.0.0",
+	"description": "Models for zsfootball",
+	"license": "BSD",
+	"repository": "zsagia/zsfootball-models",
+	"engines": {
+		"node": ">=0.12.0",
+		"npm": ">=3.0.0"
+	},
+	"files": [
+		"lib",
+		"src",
+		"test"
+	],
+	"scripts": {
+		"compile": "babel --presets es2015 -d lib/ src/",
+		"publish": "npm run compile",
+		"test": "gulp test"
+	},
+	"keywords": [
+		"zsfootball"
+	],
+	"dependencies": {
+    "bootstrap": "^3.3.6",
+		"metal-state": "metal/metal-state#master"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.4.5",
+		"babel-preset-es2015": "^6.3.13",
+		"gulp": "^3.8.11",
+		"gulp-metal": "^1.0.0"
+	}
+}
