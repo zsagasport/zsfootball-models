@@ -1,6 +1,7 @@
 {
 	"name": "zsfootball-models",
 	"version": "0.0.0",
+	"main": "src/all/models.js",
 	"description": "Models for zsfootball",
 	"license": "BSD",
 	"repository": "zsagia/zsfootball-models",
