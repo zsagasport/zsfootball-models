@@ -4,6 +4,10 @@ import core from 'metal';
 import State from 'metal-state';
 
 class Model extends State  {
+	constructor(opt_config, opt_parentElement) {
+		super(opt_config, opt_parentElement);
+	}
+
 	/**
 	 * Makes an unique id for the model.
 	 * @return {string} Unique id.
