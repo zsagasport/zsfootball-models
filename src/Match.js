@@ -6,6 +6,18 @@ class Match extends Model  {
 	constructor(opt_config, opt_parentElement) {
 		super(opt_config, opt_parentElement);
 	}
+
+	getLocalDate() {
+		var dateString = '';
+
+		if (this.date) {
+			var date = new Date(this.date);
+
+			dateString = date.getHours() + ':' + date.getMinutes();
+		}
+		
+		return dateString;
+	}
 }
 
 Match.STATE = {
