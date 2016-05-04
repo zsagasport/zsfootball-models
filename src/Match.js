@@ -7,16 +7,16 @@ class Match extends Model  {
 		super(opt_config, opt_parentElement);
 	}
 
-	getLocalHourMinute() {
-		var dateString = '';
+	setDate(value) {
+		var date = new Date(value);
 
-		if (this.date) {
-			var date = new Date(this.date);
+		this.setLocalHourMinute_(date);
 
-			dateString = date.getHours() + ':' + date.getMinutes();
-		}
-		
-		return dateString;
+		return date;
+	}
+
+	setLocalHourMinute_(date) {
+		this.localHourMinute = date.getHours() + ':' + date.getMinutes();
 	}
 }
 
@@ -60,6 +60,13 @@ Match.STATE = {
 	 *
 	 */
 	homeGoals: {
+
+	},
+
+	/**
+	 *
+	 */
+	localHourMinute: {
 
 	},
 
