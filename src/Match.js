@@ -7,7 +7,7 @@ class Match extends Model  {
 		super(opt_config, opt_parentElement);
 	}
 
-	getLocalDate() {
+	getLocalHourMinute() {
 		var dateString = '';
 
 		if (this.date) {
