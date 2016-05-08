@@ -27,7 +27,7 @@ Round.STATE = {
 	 *
 	 */
 	competition: {
-		setter: 'setCompetition'
+		setter: 'setCompetition_'
 	},
 
 	/**
