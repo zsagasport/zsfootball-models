@@ -9,6 +9,13 @@ Competition.STATE = {
 	/**
 	 *
 	 */
+	country: {
+
+	},
+
+	/**
+	 *
+	 */
 	seasonId: {
 
 	},
