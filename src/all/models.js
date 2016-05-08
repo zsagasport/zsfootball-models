@@ -15,6 +15,7 @@ import Section from '../Section';
 import Sport from '../Sport';
 import Team from '../Team';
 import TeamMember from '../TeamMember';
+import ModelUtil from '../util/ModelUtil';
 
 
 export default Model;
@@ -26,6 +27,7 @@ export {
 	Location,
 	Match,
 	Model,
+	ModelUtil,
 	Person,
 	Player,
 	Round,
