@@ -2,8 +2,16 @@
 
 import Round from '../src/Round';
 
+var round;
+
 describe('Round', function() {
-	it('should be tested', function() {
-		assert.fail('No tests for this module yet.');
+	afterEach(function() {
+		round = null;
+	});
+
+	it('should initialize competition state with undefined ', function() {
+		round = new Round();
+
+		assert.isUndefined(round.competition);
 	});
 }); 
