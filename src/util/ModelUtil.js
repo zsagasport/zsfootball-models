@@ -1,9 +1,13 @@
 'use strict'
 
 import { core, object } from 'metal';
-import {localStorage} from 'zssport-storage';
+import {Storage} from 'zssport-storage';
 
 class ModelUtil {
+	constructor() {
+		this.localStorage = new Storage(Storage.TYPE.LOCAL);
+	}
+
 	/**
 	 * Returns an Object if value isObject
 	 * @param {number or Object} value
@@ -13,12 +17,12 @@ class ModelUtil {
 		var competition;
 
 		if (core.isObject(value)) {
-			localStorage.setJSONItem(value.id.toString(), value);
+			this.localStorage.setJSONItem(value.id.toString(), value);
 
 			competition = value;
 		}
 		else if (core.isNumber(value)) {
-			var object = localStorage.getJSONItem(value.toString());
+			var object = this.localStorage.getJSONItem(value.toString());
 
 			if (object) {
 				competition = object;
