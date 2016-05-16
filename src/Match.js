@@ -3,78 +3,99 @@
 import Model from './Model';
 
 class Match extends Model  {
-	constructor(opt_config, opt_parentElement) {
-		super(opt_config, opt_parentElement);
+	/**
+	 *
+	 */
+	getAwayGoalList() {
+		return this.goals.awayGoalList || [];
 	}
 
-	getLocalHourMinute_() {
-		var matchDate = new Date(this.matchDate);
+	/**
+	 *
+	 */
+	getAwayGoals() {
+		return this.goals.awayGoals || 0;
+	}
 
-		return matchDate.getHours() + ':' + (matchDate.getMinutes() === 0 ? '00' : matchDate.getMinutes());
+	/**
+	 *
+	 */
+	getHomeGoalList() {
+		return this.goals.homeGoalList || [];
+	}
+
+	/**
+	 *
+	 */
+	getHomeGoals() {
+		return this.goals.homeGoals || 0;
 	}
 }
 
 Match.STATE = {
 	/**
-	 *
+	 * The number of spectators who attended this match
+	 * @type {number}
 	 */
 	attendance: {
 
 	},
 
 	/**
-	 *
+	 * It is a club instant, an id or a String which represent the away team
+	 * @type {Object|string|number}
 	 */
 	awayClub: {
 
 	},
 
 	/**
-	 *
+	 * It is true if the match has been finished
+	 * @type {boolean}
+	 * @default false
 	 */
-	awayGoals: {
-
+	finished: {
+		value: false
 	},
 
 	/**
-	 *
+	 * It contains information about the goals which were on this match
+	 * @type {Object}
+	 * @default {}
 	 */
-	matchDate: {
-
+	goals: {
+		value: {}
 	},
 
 	/**
-	 *
+	 * It is a club instant, an id or a String which represent the home team
+	 * @type {Object|string|number}
 	 */
 	homeClub: {
 
 	},
 
 	/**
-	 *
+	 * The location where this match was/will be played off
+	 * @type {object}
 	 */
-	homeGoals: {
+	location: {
 
 	},
 
 	/**
-	 *
+	 * Represents date of this match in milliseconds
+	 * @type {number}
 	 */
-	localHourMinute: {
-		valueFn: 'getLocalHourMinute_'
-	},
-
-	/**
-	 *
-	 */
-	locationId: {
+	matchDate: {
 
 	},
 
 	/**
-	 *
+	 * A Round model instanse, an id
+	 * @type {Object|number|string}
 	 */
-	roundId: {
+	round: {
 
 	}
 };
