@@ -24,8 +24,7 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "metal-state": "metal/metal-state#master",
-    "zssport-storage": "^0.1.3"
+    "metal-state": "metal/metal-state#master"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",

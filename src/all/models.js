@@ -17,8 +17,6 @@ import Team from '../Team';
 import TeamMember from '../TeamMember';
 import ModelUtil from '../util/ModelUtil';
 
-
-export default Model;
 export {
 	Club,
 	Competition,

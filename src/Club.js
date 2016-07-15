@@ -1,8 +1,11 @@
 'use strict';
 
-import Model from './Model';
+import State from 'metal-state';
 
-class Club extends Model  {
+class Club extends State  {
+	getShortTitle() {
+		return this.shortTitle ? this.shortTitle : this.title.subString(0,2).toUpperCase();
+	}
 }
 
 Club.STATE = {
@@ -11,6 +14,12 @@ Club.STATE = {
 	 */
 	title: {
 
+	},
+
+	/**
+	 *
+	 */
+	shortTitle: {
 	}
 };
 
