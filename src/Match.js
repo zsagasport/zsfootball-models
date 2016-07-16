@@ -1,6 +1,8 @@
 'use strict';
 
 import Model from './Model';
+import Club from './Club';
+import core from 'metal';
 
 class Match extends Model  {
 	/**
@@ -30,6 +32,13 @@ class Match extends Model  {
 	getHomeGoals() {
 		return this.goals.homeGoals || 0;
 	}
+
+	/**
+ 	 *
+ 	 */
+ 	setClub_(value) {
+ 		return core.isObject(value) ? new Club(value) : (core.isString(value) ? new Club({title: value}) : {});
+ 	}
 }
 
 Match.STATE = {
@@ -46,7 +55,7 @@ Match.STATE = {
 	 * @type {Object|string|number}
 	 */
 	awayClub: {
-
+		setter: 'setClub_'
 	},
 
 	/**
@@ -72,7 +81,7 @@ Match.STATE = {
 	 * @type {Object|string|number}
 	 */
 	homeClub: {
-
+		setter: 'setClub_'
 	},
 
 	/**
