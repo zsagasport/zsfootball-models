@@ -3,6 +3,9 @@
 import Model from './Model';
 
 class Person extends Model  {
+	getFullName_() {
+		return this.firstName + ' ' + this.secondName;
+	}
 }
 
 Person.STATE = {
@@ -11,6 +14,10 @@ Person.STATE = {
 	 */
 	firstName: {
 
+	},
+
+	fullName: {
+		valueFn: 'getFullName_'
 	},
 
 	/**
