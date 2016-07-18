@@ -2,10 +2,11 @@
 
 import Club from '../Club';
 import Competition from '../Competition';
+import Goal from '../Goal';
 import LineUp from '../LineUp';
 import LineUpMember from '../LineUpMember';
 import Location from '../Location';
-import Match from '../Match';
+import MatchModel from '../MatchModel';
 import Model from '../Model';
 import Person from '../Person';
 import Player from '../Player';
@@ -22,10 +23,11 @@ export default Model;
 export {
 	Club,
 	Competition,
+	Goal,
 	LineUp,
 	LineUpMember,
 	Location,
-	Match,
+	MatchModel,
 	Model,
 	ModelUtil,
 	Person,
