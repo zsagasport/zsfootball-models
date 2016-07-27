@@ -27,7 +27,9 @@ class MatchModel extends Model  {
 	 *
 	 */
 	getAwayGoals() {
-		return this.goals.awayGoals || 0;
+		let awayGoals = this.goals.awayGoals;
+
+		return core.isNumber(awayGoals) ? awayGoals : (core.isNumber(awayGoals.firstHalf) ? awayGoals.firstHalf + awayGoals.secondHalf : awayGoals.firstHalf.length + awayGoals.secondHalf.length);
 	}
 
 	/**
@@ -41,7 +43,9 @@ class MatchModel extends Model  {
 	 *
 	 */
 	getHomeGoals() {
-		return this.goals.homeGoals || 0;
+		let homeGoals = this.goals.homeGoals;
+
+		return core.isNumber(homeGoals) ? homeGoals : (core.isNumber(homeGoals.firstHalf) ? homeGoals.firstHalf + homeGoals.secondHalf : homeGoals.firstHalf.length + homeGoals.secondHalf.length);
 	}
 
 	/**
