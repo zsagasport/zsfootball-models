@@ -100,7 +100,7 @@ class MatchModel extends Model  {
  					goals.secondHalf.push(goal);
  				})
  			} else {
- 				goals.firstHalf = firstHalf;
+ 				goals.secondHalf = secondHalf;
  			}
  		} else {
  			goals = goalsValue;
@@ -110,12 +110,18 @@ class MatchModel extends Model  {
  	}
 
  	setGoals_(value) {
- 		let goals = {};
+ 		if (!value) {
+ 			return value;
+ 		}
+ 		else {
+ 			let goals = {};
 
- 		goals.awayGoals = this.createGoalsObject(value.awayGoals, 'awayGoal');
- 		goals.homeGoals = this.createGoalsObject(value.homeGoals, 'homeGoal');
+	 		goals.awayGoals = this.createGoalsObject(value.awayGoals, 'awayGoal');
+	 		goals.homeGoals = this.createGoalsObject(value.homeGoals, 'homeGoal');
 
- 		return goals;
+	 		return goals;
+ 		}
+
  	}
 }
 
